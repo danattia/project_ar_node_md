@@ -26,7 +26,7 @@ void loop() {
   switch (pos) {
     case 1:
       Serial.print("Case 1");
-      timnig="start";
+      timnig="timereylay";
       interval=GetData().toInt()*1000;
         digitalWrite(PinRelay, HIGH);
       if (currentTime - previousTime >= interval) {
@@ -37,7 +37,7 @@ void loop() {
       break;
     case 2:
       Serial.print("Case 2");
-       timnig="timereylay";
+       timnig="timeflash";
         interval=GetData().toInt()*1000;
       if(currentTime - TimeForOne >= 1000){
         cnt++;
@@ -52,10 +52,11 @@ void loop() {
       break;
     case 3:
       Serial.print("Case 3");
-       timnig="timeflash";
+       timnig="start";
         interval=GetData().toInt()*1000;
       digitalWrite(pwmPin, pwmValue);
       if (currentTime - previousTime >= interval) {
+        digitalWrite(pwmPin, LOW);
         previousTime = currentTime;
         pos = 4;
       }
