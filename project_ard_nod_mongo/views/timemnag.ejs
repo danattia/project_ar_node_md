@@ -1,0 +1,22 @@
+<%- include ("header.ejs") %>
+<%- include ("menu.ejs") %>
+<main>
+    <h1>ניהול זמנים</h1>
+    <div id="addform">
+        <form action="" method="post">
+            <label for="start">start:</label>
+            <input type="text" name="start" id="start" value="<%= item.start %>" />
+            <label for="timereylay">timereylay:</label>
+            <input type="text" name="timereylay" id="timereylay" value="<%= item.timereylay %>" />
+            <label for="timeflash">timeflash:</label>
+            <input type="text" name="timeflash" id="timeflash" value="<%= item.timeflash %>" />
+            <label for="delay">delay:</label>
+            <input type="text" name="delay" id="delay" value="<%= item.delay %>" />
+            <br>
+            <br>
+            <button>save</button>
+           
+        </form>
+    </div>
+</main>
+<%- include ("footer.ejs") %>
